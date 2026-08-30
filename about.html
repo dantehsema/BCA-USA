@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>About — BCA-USA</title>
+  <meta name="description" content="Learn about the Bali Cultural Association USA — our history, mission, vision, leadership, and 14 nationwide chapters since 1988."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    .mv-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:48px}
+    .mv-card{border-radius:var(--r-lg);padding:48px 40px;position:relative;overflow:hidden}
+    .mv-card.mission{background:linear-gradient(135deg,var(--burg-dark),var(--burg))}
+    .mv-card.vision{background:var(--charcoal);border:1px solid var(--glass-border)}
+    .mv-card::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 20%,rgba(201,168,76,0.12),transparent 55%)}
+    .mv-label{font-size:0.72rem;text-transform:uppercase;letter-spacing:0.14em;color:var(--gold);font-weight:600;margin-bottom:16px;position:relative}
+    .mv-card h3{font-family:var(--font-serif);font-size:1.5rem;color:#fff;margin-bottom:16px;position:relative}
+    .mv-card p{color:rgba(255,255,255,0.68);line-height:1.85;font-size:0.95rem;position:relative}
+    .structure-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:48px}
+    .structure-card{background:var(--white);border:1px solid var(--border);border-radius:var(--r-md);padding:28px 20px;text-align:center;transition:all 0.28s var(--ease)}
+    .structure-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:var(--gold)}
+    .structure-icon{font-size:2rem;margin-bottom:12px}
+    .structure-card h4{font-family:var(--font-serif);font-size:1rem;color:var(--burg-dark);margin-bottom:8px}
+    .structure-card p{font-size:0.82rem;color:var(--text-mid);line-height:1.6}
+    .board-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:48px}
+    .board-card{background:var(--white);border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden;transition:all 0.28s var(--ease)}
+    .board-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:var(--gold)}
+    .board-photo{height:160px;background:linear-gradient(135deg,var(--burg-dark),var(--burg-mid));position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;font-size:3rem}
+    .board-body{padding:18px 16px}
+    .board-name{font-family:var(--font-serif);font-size:1rem;color:var(--burg-dark);margin-bottom:4px}
+    .board-title{font-size:0.78rem;color:var(--text-mid);font-weight:500}
+    .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px}
+    .gallery-item{aspect-ratio:4/3;border-radius:var(--r-md);overflow:hidden;position:relative;background:linear-gradient(135deg,var(--burg-dark),var(--burg-mid));cursor:pointer;transition:transform 0.28s var(--ease)}
+    .gallery-item:hover{transform:scale(1.02)}
+    .gallery-item-shimmer{position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.05),transparent);animation:shimmer 2.5s infinite}
+    .gallery-item-label{position:absolute;bottom:14px;left:14px;background:rgba(10,5,3,0.75);backdrop-filter:blur(8px);color:#fff;font-size:0.75rem;padding:6px 14px;border-radius:var(--r-pill)}
+    @media(max-width:1024px){.structure-grid,.board-grid{grid-template-columns:repeat(2,1fr)}.mv-grid{grid-template-columns:1fr}}
+    @media(max-width:680px){.gallery-grid{grid-template-columns:1fr 1fr}}
+  </style>
+</head>
+<body>
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo"><div class="logo-mark">B</div><div><div class="logo-name">BCA-USA</div><div class="logo-sub">Bali Cultural Association</div></div></a>
+      <nav class="main-nav" id="main-nav">
+        <a href="index.html"   class="nav-link" id="nav-home">Home</a>
+        <a href="about.html"   class="nav-link active" id="nav-about">About</a>
+        <a href="events.html"  class="nav-link" id="nav-events">Events</a>
+        <a href="join.html"    class="nav-link" id="nav-join">Membership</a>
+        <a href="contact.html" class="nav-link" id="nav-contact">Contact</a>
+        <a href="join.html" class="btn btn-gold btn-sm nav-cta" id="nav-cta">Join Us</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container reveal">
+      <span class="badge">Est. 1988</span>
+      <h1>About BCA-USA</h1>
+      <p>A proud legacy of culture, community, and service — serving the Bali Nyonga people of Cameroon across America.</p>
+    </div>
+  </section>
+
+  <!-- History -->
+  <section class="section" id="history">
+    <div class="container">
+      <div class="about-split">
+        <div class="about-img reveal">
+          <div class="about-img-shimmer"></div>
+          <div class="about-accent"></div>
+          <div class="about-img-label">📍 Nationwide — Est. 1988</div>
+        </div>
+        <div class="about-body reveal reveal-delay-1">
+          <span class="badge">Our Story</span>
+          <h2 class="section-title dark">A Legacy Born in 1988</h2>
+          <div class="divider"></div>
+          <p>The Bali Cultural Association USA (BCA-USA) was founded in 1988 by members of the Bali Nyonga diaspora who recognized the need for a unified, organized body to preserve their culture and serve their community in the United States.</p>
+          <p>From its humble beginnings, BCA-USA has grown into a nationwide organization with 14 active chapters, a National Executive Committee, more than 12 standing committees, and a passionate membership spread from the East Coast to the Pacific.</p>
+          <p>Registered as a 501(c)(3) nonprofit, BCA-USA operates as an apolitical organization — guided solely by cultural pride, fraternal unity, and the mission to uplift lives both here in America and back home in Bali, Cameroon.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission & Vision -->
+  <section class="section" style="background:var(--charcoal)" id="mission">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="badge">Purpose</span>
+        <h2 class="section-title light">Mission &amp; Vision</h2>
+        <div class="divider center"></div>
+      </div>
+      <div class="mv-grid">
+        <div class="mv-card mission reveal">
+          <div class="mv-label">🎯 Our Mission</div>
+          <h3>Preserve. Promote. Propagate.</h3>
+          <p>To preserve, promote, and propagate the culture of the Bali Nyonga people — fostering fraternal relations among all people of Bali Chamba heritage and friends of Bali, while improving the quality of life in Bali through development projects in healthcare, education, and social welfare.</p>
+        </div>
+        <div class="mv-card vision reveal reveal-delay-1">
+          <div class="mv-label">🔭 Our Vision</div>
+          <h3>One BCA. One Story. One Voice.</h3>
+          <p>A connected, visible, and globally recognized cultural organization that communicates transparently, amplifies member voices, and ensures the rich heritage of Bali Nyonga thrives for generations to come — both in the United States and around the world.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Structure -->
+  <section class="section" id="structure">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="badge">How We're Organized</span>
+        <h2 class="section-title dark">Organizational Structure</h2>
+        <div class="divider center"></div>
+        <p class="lead">BCA-USA operates through a layered governance structure ensuring both national coherence and local chapter autonomy.</p>
+      </div>
+      <div class="structure-grid">
+        <div class="structure-card reveal"><div class="structure-icon">🏛️</div><h4>Board of Directors</h4><p>Provides high-level oversight, strategic direction, and governance for the national association.</p></div>
+        <div class="structure-card reveal reveal-delay-1"><div class="structure-icon">⚙️</div><h4>National Executive Committee</h4><p>Manages day-to-day operations, implements BOD strategy, and coordinates national programs.</p></div>
+        <div class="structure-card reveal reveal-delay-2"><div class="structure-icon">📋</div><h4>12+ Standing Committees</h4><p>Specialized committees covering culture, finance, youth, development, communications, and more.</p></div>
+        <div class="structure-card reveal reveal-delay-3"><div class="structure-icon">🗺️</div><h4>14 US Chapters</h4><p>Local chapters across the nation, each with its own leadership, hosting local events and chapter meetings.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Leadership -->
+  <section class="section" style="background:var(--cream)" id="leadership">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="badge">Leadership</span>
+        <h2 class="section-title dark">National Leadership</h2>
+        <div class="divider center"></div>
+        <p class="lead">BCA-USA is guided by dedicated servant-leaders elected by the membership to represent the interests of all Bali Nyonga people in the United States.</p>
+      </div>
+      <div class="board-grid">
+        <div class="board-card reveal">
+          <div class="board-photo">👤</div>
+          <div class="board-body"><div class="board-name">Ni Colins Doh</div><div class="board-title">National President (2026–2028)</div></div>
+        </div>
+        <div class="board-card reveal reveal-delay-1">
+          <div class="board-photo">👤</div>
+          <div class="board-body"><div class="board-name">Vice President</div><div class="board-title">National Executive Committee</div></div>
+        </div>
+        <div class="board-card reveal reveal-delay-2">
+          <div class="board-photo">👤</div>
+          <div class="board-body"><div class="board-name">Secretary General</div><div class="board-title">National Executive Committee</div></div>
+        </div>
+        <div class="board-card reveal reveal-delay-3">
+          <div class="board-photo">👤</div>
+          <div class="board-body"><div class="board-name">National Treasurer</div><div class="board-title">National Executive Committee</div></div>
+        </div>
+      </div>
+      <p style="text-align:center;margin-top:32px;font-size:0.85rem;color:var(--text-mid)">Full leadership directory available at <a href="https://bca-usa.org" target="_blank" style="color:var(--burg)">bca-usa.org</a></p>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="section" id="gallery">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="badge">Our Community</span>
+        <h2 class="section-title dark">Gallery</h2>
+        <div class="divider center"></div>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item reveal"><div class="gallery-item-shimmer"></div><div class="gallery-item-label">Annual Convention</div></div>
+        <div class="gallery-item reveal reveal-delay-1"><div class="gallery-item-shimmer"></div><div class="gallery-item-label">Cultural Night</div></div>
+        <div class="gallery-item reveal reveal-delay-2"><div class="gallery-item-shimmer"></div><div class="gallery-item-label">Leadership Summit</div></div>
+        <div class="gallery-item reveal"><div class="gallery-item-shimmer"></div><div class="gallery-item-label">Youth Forum</div></div>
+        <div class="gallery-item reveal reveal-delay-1"><div class="gallery-item-shimmer"></div><div class="gallery-item-label">Community Service</div></div>
+        <div class="gallery-item reveal reveal-delay-2"><div class="gallery-item-shimmer"></div><div class="gallery-item-label">Chapter Meeting</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container reveal">
+      <h2 class="section-title light">Ready to Join BCA-USA?</h2>
+      <p>Our membership portal is coming soon. Sign up to be first in line.</p>
+      <div class="cta-btns" style="margin-top:32px">
+        <a href="join.html"    class="btn btn-gold btn-lg"    id="about-join-btn">Join the Waitlist</a>
+        <a href="contact.html" class="btn btn-outline btn-lg" id="about-contact-btn">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer"><div class="container"><div class="footer-grid">
+    <div class="footer-brand"><a href="index.html" class="logo"><div class="logo-mark">B</div><div><div class="logo-name">BCA-USA</div><div class="logo-sub">Bali Cultural Association</div></div></a><p>Preserving Heritage. Building Community. Empowering Lives. Since 1988.</p><div class="social-row" style="margin-top:20px"><a href="https://www.facebook.com/bcausa/" target="_blank" rel="noopener" class="social-btn">f</a><a href="#" class="social-btn" title="Instagram coming soon">📷</a><a href="https://www.youtube.com/balichamba" target="_blank" rel="noopener" class="social-btn">▶</a></div></div>
+    <div class="footer-col"><h5>Navigate</h5><a href="index.html">Home</a><a href="about.html">About</a><a href="events.html">Events</a><a href="join.html">Membership</a><a href="contact.html">Contact</a></div>
+    <div class="footer-col"><h5>Organization</h5><a href="#history">Our History</a><a href="#leadership">Leadership</a><a href="#mission">Mission &amp; Vision</a></div>
+    <div class="footer-col"><h5>Contact</h5><a href="mailto:info@bca-usa.org">info@bca-usa.org</a><a href="contact.html">PO Box 1602, Spring, TX 77383</a></div>
+  </div><div class="footer-bottom"><p>© 2026 Bali Cultural Association USA. All rights reserved. | 501(c)(3) Nonprofit</p></div></div></footer>
+  <script src="js/script.js"></script>
+</body>
+</html>

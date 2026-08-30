@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Contact — BCA-USA</title>
+  <meta name="description" content="Contact BCA-USA — reach the national office or find your nearest chapter across 14 locations nationwide."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    .contact-layout{display:grid;grid-template-columns:1fr 1.4fr;gap:64px;align-items:start}
+    .contact-info{display:flex;flex-direction:column;gap:20px}
+    .contact-info-card{background:var(--white);border:1px solid var(--border);border-radius:var(--r-lg);padding:28px 24px;display:flex;gap:16px;align-items:flex-start;transition:all 0.25s var(--ease)}
+    .contact-info-card:hover{border-color:var(--gold);transform:translateX(4px)}
+    .contact-icon{width:44px;height:44px;background:linear-gradient(135deg,var(--gold),var(--gold-lt));border-radius:var(--r-md);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+    .contact-info-card h4{font-family:var(--font-serif);font-size:1rem;color:var(--burg-dark);margin-bottom:4px}
+    .contact-info-card a,.contact-info-card p{font-size:0.88rem;color:var(--text-mid);line-height:1.6}
+    .contact-info-card a:hover{color:var(--burg)}
+    .contact-form-wrap{background:var(--white);border:1px solid var(--border);border-radius:var(--r-lg);padding:48px 40px;box-shadow:var(--shadow-sm)}
+    .contact-form-wrap h3{font-family:var(--font-serif);font-size:1.5rem;color:var(--burg-dark);margin-bottom:8px}
+    .contact-form-wrap p{font-size:0.9rem;color:var(--text-mid);margin-bottom:32px}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .social-contact-row{display:flex;gap:12px;margin-top:8px}
+    .social-contact-btn{display:flex;align-items:center;gap:8px;padding:10px 18px;border-radius:var(--r-pill);border:1.5px solid var(--border);font-size:0.83rem;font-weight:500;color:var(--text-mid);transition:all 0.22s var(--ease)}
+    .social-contact-btn:hover{border-color:var(--gold);color:var(--burg);transform:translateY(-2px)}
+    .chapters-section{background:var(--cream);padding:80px 0}
+    .chapters-full-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px}
+    .chapter-card{background:var(--white);border:1px solid var(--border);border-radius:var(--r-md);padding:20px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px;transition:all 0.25s var(--ease)}
+    .chapter-card:hover{border-color:var(--gold);transform:translateX(4px);box-shadow:var(--shadow-sm)}
+    .chapter-card-left{display:flex;align-items:center;gap:12px}
+    .chapter-dot-lg{width:10px;height:10px;border-radius:50%;background:var(--gold);flex-shrink:0}
+    .chapter-card h4{font-family:var(--font-serif);font-size:0.95rem;color:var(--burg-dark)}
+    .chapter-card p{font-size:0.78rem;color:var(--text-mid)}
+    .chapter-link{font-size:0.78rem;color:var(--burg);font-weight:500;white-space:nowrap}
+    .chapter-link:hover{text-decoration:underline}
+    @media(max-width:1024px){.contact-layout{grid-template-columns:1fr;gap:40px}.chapters-full-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:680px){.chapters-full-grid{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}.contact-form-wrap{padding:28px 20px}.social-contact-row{flex-direction:column}}
+  </style>
+</head>
+<body>
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo"><div class="logo-mark">B</div><div><div class="logo-name">BCA-USA</div><div class="logo-sub">Bali Cultural Association</div></div></a>
+      <nav class="main-nav" id="main-nav">
+        <a href="index.html"   class="nav-link" id="nav-home">Home</a>
+        <a href="about.html"   class="nav-link" id="nav-about">About</a>
+        <a href="events.html"  class="nav-link" id="nav-events">Events</a>
+        <a href="join.html"    class="nav-link" id="nav-join">Membership</a>
+        <a href="contact.html" class="nav-link active" id="nav-contact">Contact</a>
+        <a href="join.html" class="btn btn-gold btn-sm nav-cta" id="nav-cta">Join Us</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container reveal">
+      <span class="badge">BCA-USA</span>
+      <h1>Get in Touch</h1>
+      <p>Reach the BCA-USA national office or connect directly with your nearest chapter.</p>
+    </div>
+  </section>
+
+  <section class="section" id="contact-main">
+    <div class="container">
+      <div class="contact-layout">
+        <div class="contact-info reveal">
+          <span class="badge">National Office</span>
+          <h2 class="section-title dark" style="font-size:1.8rem">Contact Information</h2>
+          <div class="divider"></div>
+          <div class="contact-info-card">
+            <div class="contact-icon">📧</div>
+            <div><h4>Email</h4><a href="mailto:info@bca-usa.org">info@bca-usa.org</a></div>
+          </div>
+          <div class="contact-info-card">
+            <div class="contact-icon">📮</div>
+            <div><h4>Mailing Address</h4><p>Bali Cultural Association USA<br/>PO Box 1602<br/>Spring, TX 77383</p></div>
+          </div>
+          <div class="contact-info-card">
+            <div class="contact-icon">🌐</div>
+            <div><h4>Website</h4><a href="https://bca-usa.org" target="_blank" rel="noopener">bca-usa.org</a></div>
+          </div>
+          <div>
+            <h4 style="font-family:var(--font-serif);color:var(--burg-dark);margin-bottom:12px;font-size:1rem">Follow Us</h4>
+            <div class="social-contact-row">
+              <a href="https://www.facebook.com/bcausa/" target="_blank" rel="noopener" class="social-contact-btn" id="contact-fb">f Facebook</a>
+              <a href="https://www.youtube.com/balichamba" target="_blank" rel="noopener" class="social-contact-btn" id="contact-yt">▶ YouTube</a>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form-wrap reveal reveal-delay-1">
+          <h3>Send Us a Message</h3>
+          <p>We'll respond within 2–3 business days.</p>
+          <form id="contact-form" onsubmit="handleContactForm(event)">
+            <div class="form-row">
+              <div class="form-group"><label class="form-label" for="cf-fname">First Name</label><input type="text" class="form-input" id="cf-fname" required placeholder="Your first name"/></div>
+              <div class="form-group"><label class="form-label" for="cf-lname">Last Name</label><input type="text" class="form-input" id="cf-lname" required placeholder="Your last name"/></div>
+            </div>
+            <div class="form-group"><label class="form-label" for="cf-email">Email Address</label><input type="email" class="form-input" id="cf-email" required placeholder="your@email.com"/></div>
+            <div class="form-group">
+              <label class="form-label" for="cf-subject">Subject</label>
+              <select class="form-select" id="cf-subject">
+                <option value="" disabled selected>Select a subject</option>
+                <option>General Inquiry</option>
+                <option>Chapter Information</option>
+                <option>Events &amp; Programs</option>
+                <option>Membership</option>
+                <option>Development Projects</option>
+                <option>Media &amp; Press</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group"><label class="form-label" for="cf-message">Message</label><textarea class="form-textarea" id="cf-message" required placeholder="Tell us how we can help..."></textarea></div>
+            <button type="submit" class="btn btn-burg" id="contact-submit-btn" style="width:100%;justify-content:center">Send Message →</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="chapters-section" id="chapters">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="badge">Nationwide</span>
+        <h2 class="section-title dark">Find Your Chapter</h2>
+        <div class="divider center"></div>
+        <p class="lead">BCA-USA has 14 active chapters across the United States. Connect with the one nearest to you.</p>
+      </div>
+      <div class="chapters-full-grid">
+        <div class="chapter-card reveal"><div class="chapter-card-left"><div class="chapter-dot-lg"></div><div><h4>Eastern Chapter</h4><p>Maryland, Virginia, DC, Delaware, WV</p></div></div><a href="mailto:info@bca-usa.org?subject=Eastern Chapter Inquiry" class="chapter-link">Contact →</a></div>
+        <div class="chapter-card reveal reveal-delay-1"><div class="chapter-card-left"><div class="chapter-dot-lg"></div><div><h4>Southern Texas Chapter</h4><p>Southern Texas region</p></div></div><a href="mailto:info@bca-usa.org?subject=Southern Texas Chapter" class="chapter-link">Contact →</a></div>
+        <div class="chapter-card reveal reveal-delay-2"><div class="chapter-card-left"><div class="chapter-dot-lg"></div><div><h4>Northern Texas Chapter</h4><p>Northern Texas region</p></div></div><a href="mailto:info@bca-usa.org?subject=Northern Texas Chapter" class="chapter-link">Contact →</a></div>
+        <div class="chapter-card reveal"><div class="chapter-card-left"><div class="chapter-dot-lg"></div><div><h4>Oklahoma Chapter</h4><p>Oklahoma statewide</p></div></div><a href="mailto:info@bca-usa.org?subject=Oklahoma Chapter" class="chapter-link">Contact →</a></div>
+        <div class="chapter-card reveal reveal-delay-1"><div class="chapter-card-left"><div class="chapter-dot-lg"></div><div><h4>South Eastern Chapter</h4><p>Southeast United States</p></div></div><a href="mailto:info@bca-usa.org?subject=South Eastern Chapter" class="chapter-link">Contact →</a></div>
+        <div class="chapter-card reveal reveal-delay-2"><div class="chapter-card-left"><div class="chapter-dot-lg"></div><div><h4>Great Lakes Chapter</h4><p>Great Lakes region</p></div></div><a href="mailto:info@bca-usa.org?subject=Great Lakes Chapter" class="chapter-link">Contact →</a></div>
+        <div class="chapter-card reveal" style="grid-column:span 1;background:var(--cream);border-style:dashed"><div class="chapter-card-left"><div class="chapter-dot-lg" style="background:rgba(201,168,76,0.4)"></div><div><h4>+ 8 More Chapters</h4><p>Contact national office to locate</p></div></div><a href="mailto:info@bca-usa.org?subject=Chapter Location" class="chapter-link">Find Yours →</a></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer"><div class="container"><div class="footer-grid">
+    <div class="footer-brand"><a href="index.html" class="logo"><div class="logo-mark">B</div><div><div class="logo-name">BCA-USA</div><div class="logo-sub">Bali Cultural Association</div></div></a><p>Preserving Heritage. Building Community. Empowering Lives. Since 1988.</p><div class="social-row" style="margin-top:20px"><a href="https://www.facebook.com/bcausa/" target="_blank" rel="noopener" class="social-btn">f</a><a href="#" class="social-btn" title="Instagram coming soon">📷</a><a href="https://www.youtube.com/balichamba" target="_blank" rel="noopener" class="social-btn">▶</a></div></div>
+    <div class="footer-col"><h5>Navigate</h5><a href="index.html">Home</a><a href="about.html">About</a><a href="events.html">Events</a><a href="join.html">Membership</a><a href="contact.html">Contact</a></div>
+    <div class="footer-col"><h5>Organization</h5><a href="about.html#history">Our History</a><a href="about.html#leadership">Leadership</a><a href="#chapters">Chapters</a></div>
+    <div class="footer-col"><h5>Contact</h5><a href="mailto:info@bca-usa.org">info@bca-usa.org</a><a href="#">PO Box 1602, Spring, TX 77383</a></div>
+  </div><div class="footer-bottom"><p>© 2026 Bali Cultural Association USA. All rights reserved. | 501(c)(3) Nonprofit</p></div></div></footer>
+  <script src="js/script.js"></script>
+  <script>
+    function handleContactForm(e) {
+      e.preventDefault();
+      const btn = document.getElementById('contact-submit-btn');
+      btn.textContent = '✓ Message Sent!';
+      btn.style.background = 'linear-gradient(135deg,#2e7d32,#388e3c)';
+      btn.disabled = true;
+    }
+  </script>
+</body>
+</html>
