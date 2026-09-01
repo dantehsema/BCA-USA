@@ -1,0 +1,11 @@
+{
+  "name": "bca-usa",
+  "private": true,
+  "scripts": {
+    "smoke": "node scripts/site-smoke.mjs",
+    "predev": "npm run smoke",
+    "dev": "python3 scripts/dev-server.py",
+    "preview": "npm run dev",
+    "prepreview": "npm run smoke"
+  }
+}

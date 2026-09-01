@@ -26,8 +26,9 @@ if (hamburger && mainNav) {
 }
 
 // ── Scroll Reveal (Intersection Observer) ─────
-const reveals = document.querySelectorAll('.reveal');
-if (reveals.length) {
+function initReveal() {
+  const reveals = document.querySelectorAll('.reveal');
+  if (!reveals.length) return;
   const io = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -96,8 +97,55 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 });
 
+// ── Chapters (14 regions) ─────────────────────
+function chapterPreviewText(ch) {
+  return ch.name + ' — States: ' + ch.region + ' Key areas: ' + ch.areas;
+}
+
+function escAttr(s) {
+  return s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
+}
+
+function initChapters() {
+  const list = window.BCA_CHAPTERS;
+  if (!list || !list.length) return;
+
+  const delays = ['', ' reveal-delay-1', ' reveal-delay-2'];
+
+  const home = document.getElementById('chapters-grid-home');
+  if (home) {
+    home.innerHTML = list.map((ch, i) =>
+      '<div class="chapter-chip reveal' + delays[i % 3] + '" tabindex="0" role="button" data-link-preview="' + escAttr(chapterPreviewText(ch)) + '">' +
+      '<span class="chapter-dot"></span><span class="chapter-name">' + escAttr(ch.label) + '</span></div>'
+    ).join('');
+  }
+
+  const contact = document.getElementById('chapters-grid-contact');
+  if (contact) {
+    contact.innerHTML = list.map((ch, i) =>
+      '<div class="chapter-card reveal' + delays[i % 3] + '" tabindex="0" data-link-preview="' + escAttr(chapterPreviewText(ch)) + '">' +
+      '<div class="chapter-card-left"><div class="chapter-dot-lg"></div>' +
+      '<div><h4>' + escAttr(ch.name) + '</h4><p>' + escAttr(ch.region) + '</p></div></div>' +
+      '<a href="mailto:info@bca-usa.org?subject=' + encodeURIComponent(ch.mailSubject) + '" class="chapter-link">Contact →</a></div>'
+    ).join('');
+  }
+
+  const sel = document.getElementById('waitlist-chapter');
+  if (sel) {
+    sel.innerHTML = '<option value="" disabled selected>Select your nearest chapter</option>';
+    list.forEach(ch => {
+      const o = document.createElement('option');
+      o.textContent = ch.label;
+      sel.appendChild(o);
+    });
+    const other = document.createElement('option');
+    other.textContent = 'Other / Not Sure';
+    sel.appendChild(other);
+  }
+}
+
 // ── Link hover previews ───────────────────────
-(function initLinkPreviews() {
+function initLinkPreviews() {
   const BY_ID = {
     'nav-home': 'Return to the homepage — hero, community stats, featured events, and chapter overview.',
     'nav-about': 'Our history since 1988, mission & vision, leadership board, and photo gallery.',
@@ -168,15 +216,10 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     fundraiser: 'Galas and dinners raising funds for healthcare and education in Bali.'
   };
 
-  const CHAPTER_MAIL = {
-    'Eastern Chapter Inquiry': 'Email about the Eastern Chapter — Maryland, Virginia, DC, Delaware, and WV.',
-    'Southern Texas Chapter': 'Contact the Southern Texas Chapter leadership.',
-    'Northern Texas Chapter': 'Reach the Northern Texas Chapter for local events and membership.',
-    'Oklahoma Chapter': 'Connect with the Oklahoma statewide chapter.',
-    'South Eastern Chapter': 'Inquire about the South Eastern US chapter.',
-    'Great Lakes Chapter': 'Contact the Great Lakes regional chapter.',
-    'Chapter Location': 'Ask the national office to help you find one of the 8+ additional chapters.'
-  };
+  const CHAPTER_MAIL = {};
+  (window.BCA_CHAPTERS || []).forEach(ch => {
+    CHAPTER_MAIL[ch.mailSubject] = chapterPreviewText(ch);
+  });
 
   function label(el) {
     return (el.getAttribute('aria-label') || el.textContent || '').replace(/\s+/g, ' ').trim();
@@ -195,6 +238,8 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   }
 
   function previewFor(el) {
+    if (el.dataset.linkPreview) return el.dataset.linkPreview;
+
     const id = el.id;
     if (id && BY_ID[id]) return BY_ID[id];
 
@@ -242,7 +287,8 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   const selectors = [
     'a.btn', 'button.btn', 'a.nav-link', 'a.logo', 'a.social-btn',
     'a.chapter-link', 'a.social-contact-btn', '.footer-col a',
-    'button.filter-tab', 'button.hamburger'
+    'button.filter-tab', 'button.hamburger',
+    '.chapter-chip', '.chapter-card'
   ].join(', ');
 
   const tip = document.createElement('div');
@@ -321,4 +367,8 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 
   window.addEventListener('scroll', () => { if (active) positionTip(active); }, { passive: true });
   window.addEventListener('resize', () => { if (active) positionTip(active); }, { passive: true });
-})();
+}
+
+initChapters();
+initReveal();
+initLinkPreviews();
