@@ -84,6 +84,9 @@ h1,h2,h3,h4{font-family:var(--font-serif);line-height:1.2}
 .hero-bg{position:absolute;inset:0;background:linear-gradient(150deg,rgba(90,12,28,0.88) 0%,rgba(10,5,3,0.75) 50%,rgba(10,5,3,0.95) 100%)}
 .hero-mesh{position:absolute;inset:0;background:radial-gradient(ellipse at 15% 85%,rgba(201,168,76,0.1) 0%,transparent 55%),radial-gradient(ellipse at 85% 15%,rgba(125,17,40,0.2) 0%,transparent 55%),radial-gradient(ellipse at 50% 50%,rgba(201,168,76,0.04) 0%,transparent 70%);pointer-events:none}
 .hero-img-bg{position:absolute;inset:0;background:url('../images/hero.jpg') center/cover no-repeat;z-index:-1}
+/* ── YouTube video background ── */
+.hero-video-wrap{position:absolute;inset:0;overflow:hidden;z-index:0;pointer-events:none}
+.hero-video-wrap iframe{position:absolute;top:50%;left:50%;width:180%;height:180%;transform:translate(-50%,-50%);border:none;opacity:0.55}
 .hero-content{position:relative;z-index:2;width:100%;max-width:1160px;margin:0 auto;padding:calc(var(--nav-h) + 80px) 32px 100px}
 .hero-eyebrow{font-size:0.75rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:22px;font-weight:500;display:flex;align-items:center;gap:12px}
 .hero-eyebrow::before{content:'';width:32px;height:1px;background:var(--gold)}
