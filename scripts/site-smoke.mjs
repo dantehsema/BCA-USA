@@ -66,4 +66,9 @@ if (!read('contact.html').includes('id="chapters-grid-contact"')) {
 }
 ok('chapter render targets present');
 
+if (!fs.existsSync(path.join(ROOT, 'images/toghu-pattern.svg'))) {
+  fail('images/toghu-pattern.svg missing');
+}
+ok('toghu pattern asset present');
+
 console.log('smoke: all checks passed');

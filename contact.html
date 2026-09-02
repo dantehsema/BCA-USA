@@ -7,32 +7,32 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
-  <link rel="stylesheet" href="css/style.css?v=dev6"/>
+  <link rel="stylesheet" href="css/style.css?v=dev20"/>
   <style>
     .contact-layout{display:grid;grid-template-columns:1fr 1.4fr;gap:64px;align-items:start}
     .contact-info{display:flex;flex-direction:column;gap:20px}
     .contact-info-card{background:var(--white);border:1px solid var(--border);border-radius:var(--r-lg);padding:28px 24px;display:flex;gap:16px;align-items:flex-start;transition:all 0.25s var(--ease)}
     .contact-info-card:hover{border-color:var(--gold);transform:translateX(4px)}
     .contact-icon{width:44px;height:44px;background:linear-gradient(135deg,var(--gold),var(--gold-lt));border-radius:var(--r-md);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
-    .contact-info-card h4{font-family:var(--font-serif);font-size:1rem;color:var(--burg-dark);margin-bottom:4px}
+    .contact-info-card h4{font-family:var(--font-serif);font-size:1rem;color:var(--text-heading);margin-bottom:4px}
     .contact-info-card a,.contact-info-card p{font-size:0.88rem;color:var(--text-mid);line-height:1.6}
-    .contact-info-card a:hover{color:var(--burg)}
+    .contact-info-card a:hover{color:var(--gold-lt)}
     .contact-form-wrap{background:var(--white);border:1px solid var(--border);border-radius:var(--r-lg);padding:48px 40px;box-shadow:var(--shadow-sm)}
-    .contact-form-wrap h3{font-family:var(--font-serif);font-size:1.5rem;color:var(--burg-dark);margin-bottom:8px}
+    .contact-form-wrap h3{font-family:var(--font-serif);font-size:1.5rem;color:var(--text-heading);margin-bottom:8px}
     .contact-form-wrap p{font-size:0.9rem;color:var(--text-mid);margin-bottom:32px}
     .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
     .social-contact-row{display:flex;gap:12px;margin-top:8px}
     .social-contact-btn{display:flex;align-items:center;gap:8px;padding:10px 18px;border-radius:var(--r-pill);border:1.5px solid var(--border);font-size:0.83rem;font-weight:500;color:var(--text-mid);transition:all 0.22s var(--ease)}
-    .social-contact-btn:hover{border-color:var(--gold);color:var(--burg);transform:translateY(-2px)}
-    .chapters-section{background:var(--cream);padding:80px 0}
+    .social-contact-btn:hover{border-color:var(--gold);color:var(--gold-lt);transform:translateY(-2px)}
+    .chapters-section{padding:80px 0}
     .chapters-full-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px}
     .chapter-card{background:var(--white);border:1px solid var(--border);border-radius:var(--r-md);padding:20px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px;transition:all 0.25s var(--ease)}
     .chapter-card:hover{border-color:var(--gold);transform:translateX(4px);box-shadow:var(--shadow-sm)}
     .chapter-card-left{display:flex;align-items:center;gap:12px}
     .chapter-dot-lg{width:10px;height:10px;border-radius:50%;background:var(--gold);flex-shrink:0}
-    .chapter-card h4{font-family:var(--font-serif);font-size:0.95rem;color:var(--burg-dark)}
+    .chapter-card h4{font-family:var(--font-serif);font-size:0.95rem;color:var(--text-heading)}
     .chapter-card p{font-size:0.78rem;color:var(--text-mid)}
-    .chapter-link{font-size:0.78rem;color:var(--burg);font-weight:500;white-space:nowrap}
+    .chapter-link{font-size:0.78rem;color:var(--text-heading);font-weight:500;white-space:nowrap}
     .chapter-link:hover{text-decoration:underline}
     @media(max-width:1024px){.contact-layout{grid-template-columns:1fr;gap:40px}.chapters-full-grid{grid-template-columns:repeat(2,1fr)}}
     @media(max-width:680px){.chapters-full-grid{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}.contact-form-wrap{padding:28px 20px}.social-contact-row{flex-direction:column}}
@@ -41,7 +41,7 @@
 <body>
   <header class="site-header" id="site-header">
     <div class="header-inner">
-      <a href="index.html" class="logo"><div class="logo-mark">B</div><div><div class="logo-name">BCA-USA</div><div class="logo-sub">Bali Cultural Association</div></div></a>
+      <a href="index.html" class="logo"><img src="images/bca-logo.jpg" alt="" class="logo-mark" width="48" height="48"/><div><div class="logo-name">BCA-USA</div><div class="logo-sub">Bali Cultural Association</div></div></a>
       <nav class="main-nav" id="main-nav">
         <a href="index.html"   class="nav-link" id="nav-home">Home</a>
         <a href="about.html"   class="nav-link" id="nav-about">About</a>
@@ -82,7 +82,7 @@
             <div><h4>Website</h4><a href="https://bca-usa.org" target="_blank" rel="noopener">bca-usa.org</a></div>
           </div>
           <div>
-            <h4 style="font-family:var(--font-serif);color:var(--burg-dark);margin-bottom:12px;font-size:1rem">Follow Us</h4>
+            <h4 style="font-family:var(--font-serif);color:var(--text-heading);margin-bottom:12px;font-size:1rem">Follow Us</h4>
             <div class="social-contact-row">
               <a href="https://www.facebook.com/bcausa/" target="_blank" rel="noopener" class="social-contact-btn" id="contact-fb">f Facebook</a>
               <a href="https://www.youtube.com/balichamba" target="_blank" rel="noopener" class="social-contact-btn" id="contact-yt">▶ YouTube</a>
@@ -119,7 +119,7 @@
     </div>
   </section>
 
-  <section class="chapters-section" id="chapters">
+  <section class="chapters-section contact-chapters" id="chapters">
     <div class="container">
       <div class="text-center reveal">
         <span class="badge">Nationwide</span>
@@ -132,13 +132,13 @@
   </section>
 
   <footer class="site-footer"><div class="container"><div class="footer-grid">
-    <div class="footer-brand"><a href="index.html" class="logo"><div class="logo-mark">B</div><div><div class="logo-name">BCA-USA</div><div class="logo-sub">Bali Cultural Association</div></div></a><p>Culture forward. Community first. Since 1988.</p><div class="social-row" style="margin-top:20px"><a href="https://www.facebook.com/bcausa/" target="_blank" rel="noopener" class="social-btn">f</a><a href="#" class="social-btn" title="Instagram coming soon">📷</a><a href="https://www.youtube.com/balichamba" target="_blank" rel="noopener" class="social-btn">▶</a></div></div>
+    <div class="footer-brand"><a href="index.html" class="logo"><img src="images/bca-logo.jpg" alt="" class="logo-mark" width="48" height="48"/><div><div class="logo-name">BCA-USA</div><div class="logo-sub">Bali Cultural Association</div></div></a><p>Culture forward. Community first. Since 1988.</p><div class="social-row" style="margin-top:20px"><a href="https://www.facebook.com/bcausa/" target="_blank" rel="noopener" class="social-btn">f</a><a href="#" class="social-btn" title="Instagram coming soon">📷</a><a href="https://www.youtube.com/balichamba" target="_blank" rel="noopener" class="social-btn">▶</a></div></div>
     <div class="footer-col"><h5>Navigate</h5><a href="index.html">Home</a><a href="about.html">About</a><a href="events.html">Events</a><a href="join.html">Membership</a><a href="contact.html">Contact</a></div>
     <div class="footer-col"><h5>Organization</h5><a href="about.html#history">Our History</a><a href="about.html#leadership">Leadership</a><a href="#chapters">Chapters</a></div>
     <div class="footer-col"><h5>Contact</h5><a href="mailto:info@bca-usa.org">info@bca-usa.org</a><a href="#">PO Box 1602, Spring, TX 77383</a></div>
   </div><div class="footer-bottom"><p>© 2026 Bali Cultural Association USA. All rights reserved. | 501(c)(3) Nonprofit</p></div></div></footer>
-  <script src="js/chapters.js?v=dev6"></script>
-  <script src="js/script.js?v=dev6"></script>
+  <script src="js/chapters.js?v=dev20"></script>
+  <script src="js/script.js?v=dev20"></script>
   <script>
     function handleContactForm(e) {
       e.preventDefault();

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" aria-hidden="true">
+  <defs>
+    <pattern id="stipple" width="4.5" height="4.5" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1.2" r="0.5" fill="#fff" opacity="0.16"/>
+      <circle cx="3.2" cy="2.8" r="0.4" fill="#fff" opacity="0.12"/>
+    </pattern>
+    <g id="yellow-piece" fill="none" stroke="#9A7A38" stroke-width="1.35" opacity="0.62">
+      <ellipse cx="0" cy="0" rx="9" ry="5.2"/>
+      <ellipse cx="0" cy="0" rx="5.5" ry="3"/>
+      <path d="M-9 0 L-11.5 2 M9 0 L11.5 2 M0 -5.2 L0 -7.5 M0 5.2 L0 7.5" stroke-width="1"/>
+    </g>
+    <g id="red-piece" fill="url(#stipple)" stroke="#7A3830" stroke-width="1.5" opacity="0.58">
+      <path d="M-7 0 C-7 9, -7 15, 0 17 C7 15, 7 9, 7 0 Z" fill="url(#stipple)"/>
+      <path d="M0 5 C-1.8 8, 1.8 8, 0 5 Z" fill="none" stroke="#9A7A38" stroke-width="0.9" opacity="0.55"/>
+    </g>
+  </defs>
+
+  <!--
+    One border set per tile (top only — no bottom bands = no vertical doubling).
+    Top: R → circles → R → squiggle → R
+    Body: Y R Y R Y R Y R … (32px period, ends red → next tile starts yellow)
+  -->
+  <g opacity="0.42" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="0" y1="4" x2="128" y2="4" stroke="#7A3830" stroke-width="1.05" opacity="0.48"/>
+    <g stroke="#9A7A38" stroke-width="1.35" opacity="0.62">
+      <ellipse cx="7" cy="12" rx="6" ry="3.1"/><ellipse cx="21" cy="12" rx="6" ry="3.1"/>
+      <ellipse cx="35" cy="12" rx="6" ry="3.1"/><ellipse cx="49" cy="12" rx="6" ry="3.1"/>
+      <ellipse cx="63" cy="12" rx="6" ry="3.1"/><ellipse cx="77" cy="12" rx="6" ry="3.1"/>
+      <ellipse cx="91" cy="12" rx="6" ry="3.1"/><ellipse cx="105" cy="12" rx="6" ry="3.1"/>
+      <ellipse cx="119" cy="12" rx="6" ry="3.1"/>
+    </g>
+    <line x1="0" y1="19" x2="128" y2="19" stroke="#7A3830" stroke-width="1.05" opacity="0.48"/>
+    <path d="M0 27 C6.5 22, 6.5 32, 13 27 C19.5 22, 19.5 32, 26 27 C32.5 22, 32.5 32, 39 27 C45.5 22, 45.5 32, 52 27 C58.5 22, 58.5 32, 65 27 C71.5 22, 71.5 32, 78 27 C84.5 22, 84.5 32, 91 27 C97.5 22, 97.5 32, 104 27 C110.5 22, 110.5 32, 117 27 C123.5 22, 123.5 32, 128 27" stroke="#9A7A38" stroke-width="1.55" opacity="0.58"/>
+    <line x1="0" y1="33" x2="128" y2="33" stroke="#7A3830" stroke-width="1.05" opacity="0.48"/>
+
+    <!-- Alternating motif row: Y R Y R Y R Y R (no back-to-back) -->
+    <use href="#yellow-piece" x="8" y="72"/>
+    <use href="#red-piece" x="24" y="72"/>
+    <use href="#yellow-piece" x="40" y="72"/>
+    <use href="#red-piece" x="56" y="72"/>
+    <use href="#yellow-piece" x="72" y="72"/>
+    <use href="#red-piece" x="88" y="72"/>
+    <use href="#yellow-piece" x="104" y="72"/>
+    <use href="#red-piece" x="120" y="72"/>
+  </g>
+</svg>
